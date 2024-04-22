@@ -1,11 +1,15 @@
-export const taskFirst = () => {
+export function taskFirst = () => {
   const task = 'I prefer const when I can.';
   return task;
-};
+}
 
-export const getLast = () => ' is okay';
+export function getLast = () => {
+  return ' is okay';
+}
 
-export const taskNext = () => {
-  const combination = 'But sometimes let';
-  return `${combination}${getLast()}`;
-};
+export function taskNext = () => {
+  let combination = 'But sometimes let';
+  combination += getLast();
+
+  return combination;
+}
